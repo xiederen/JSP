@@ -156,8 +156,9 @@ get请求的响应速度非常快，请求信息的长度也有限制；由于�
 ##### POST请求：
 post请求只能通过表单发送；    
 例如，注册邮箱，注册一个会员等等，这时候填写的一些个人信息、一些注册信息等等；这时候通常是通过post方式通过一个表单发送到服务器端的；     
-示例：    
-````javascript
+示例：  
+
+```javascript
 <form action="http://localhost:8080/demo2.jsp" method="post">
 <input name="name" type="text"/>
 <input name="password" type="password"/>
