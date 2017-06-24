@@ -191,7 +191,8 @@ HTTP响应信息可能只是从文件系统读取一个HTML文件作为内部处
 所以，不论是请求还是响应，都是以消息的形式来传送信息；比如：你发送一个请求、发送一个消息过去，然后它处理完之后给你一个响应，它是以消息的形式反应回来的；       
 
 ### HTTP消息：
-##### 请求消息示例：    
+##### 请求消息示例： 
+
 ```
 GET /monitor/text.jsp?username=a&userpass=b HTTP/1.1 
 Host:localhost:8088
@@ -200,6 +201,7 @@ Accept: text/xml,application/xml,text/html;text/plain;
 CRLF
 title=sayhello
 ```
+
 这个请求消息由三部分组成：     
 - 请求行；         
 第一，二行为请求行，它使用GET方法提交请求数据，并且制定了使用的是HTTP协议1.1版本；
@@ -217,6 +219,7 @@ Accept这个头信息提供有关客户端可以接受的MIME类型列表；
 
 ##### 响应消息：   
 示例：
+
 ```
 HTTP/1.1 200 OK
 Server: JavaWebServer
@@ -230,6 +233,7 @@ Content-type: text/html
   </body>
 </html>
 ```
+
 - 第一部分为协议和状态码：   
 这个示例当中第一行表示通信使用的协议及其版本、状态码和状态描述；    
 HTTP 1.1表示使用的版本，是 HTTP1.1这个版本；    
@@ -248,6 +252,7 @@ HTTP响应头包含了很多关于服务器端的有用信息，如服务器的�
 
 
 ##### HTTP响应状态码：
+
 |状态码|                            说明|
 |---|---|
 |100-199|表示成功接受请求，要求客户端继续提交下一次请求才能完成整个处理过程。|
@@ -255,6 +260,7 @@ HTTP响应头包含了很多关于服务器端的有用信息，如服务器的�
 |300-399|为了完成请求：客户端进一步细化请求。|
 |400-499|表示客户端的请求有错误。|
 |500-599|表示服务器出现错误。|
+
 
 ```
 100 - Continue 初始的请求已经接受，客户应当继续发送请求的其余部分。
@@ -273,7 +279,8 @@ HTTP响应头包含了很多关于服务器端的有用信息，如服务器的�
 ## Web服务器：
 Web服务器也称为WWW(WORLD WIDE WEB)服务器；   
 Web服务器的主要功能是提供网上信息浏览服务；    
-WWW是Internet的多媒体信息查询工具；    
+WWW是Internet的多媒体信息查询工具； 
+
 ### Web服务器的起源：
 WWW是World Wide Web的缩写，也可以称为WEB，中文通常称之为"万维网"；   
 它起源于1989年3月，由欧洲量子物理实验室CERN(the European Laboratory for Particle Physics)所发展出来的主从分布式超媒体系统；     
@@ -282,7 +289,7 @@ WWW是World Wide Web的缩写，也可以称为WEB，中文通常称之为"万�
 ### Web服务器的作用：
 - Web服务器可以解析HTTP协议；   
 当Web服务器接收到一个HTTP请求时，就会返回一个HTTP响应，例如送回一个HTML页面；为了处理一个请求，Web服务器可以响应一个静态页面或者是图片，进行页面之间的跳转；或者是把动态响应的产生委托给一些其他的程序，如CGI脚本，JSP脚本，servlet脚本，ASP脚本，服务器端的JavaScript等等；或者一些其他的服务器端技术；无论他们的目的如何，这些服务器端的程序通常都是产生一个HTML这样的页面，来以此让客户端的浏览器可以浏览到；    
--      Web服务器的代理模型非常的简单，当一个请求被送到Web服务器里来时，它只单纯的把请求传递给可以很好的处理请求的程序，Web服务器仅仅提供一个可以执行服务器端程序和返回响应的环境，而不会超出职责范围；   
+- Web服务器的代理模型非常的简单，当一个请求被送到Web服务器里来时，它只单纯的把请求传递给可以很好的处理请求的程序，Web服务器仅仅提供一个可以执行服务器端程序和返回响应的环境，而不会超出职责范围；   
 
 服务器端的程序通常具有事务处理，数据库连接等功能；    
 
@@ -361,7 +368,8 @@ JBoss是一个管理EJB的容器和服务器，它支持EJB1.0和1.1、EJB2.0和
 
 ### Tomcat简介：
 Tomcat是Apache软件基金会(Apache Software  Foundation)的Jakarta项目中的一个核心项目，由Apache、Sun和其他一些公司及个人共同开发而成；    
-由于有了Sun的参与、支持，最新的Servlet和JSP规范总是能在Tomcat中得到体现；    
+由于有了Sun的参与、支持，最新的Servlet和JSP规范总是能在Tomcat中得到体现；
+
 #### Tomcat服务器特点：
 - 技术先进、性能稳定、而且免费；
 因而深受Java爱好者的喜爱并得到了部分软件开发商的认可，成为目前比较流行的Web应用服务器；   
@@ -369,7 +377,8 @@ Tomcat是Apache软件基金会(Apache Software  Foundation)的Jakarta项目中�
 任何一个感兴趣的程序员都可以更改它或者是在其中加入新的功能；   
 
 #### Tomcat服务器的体系结构：
-Tomcat是一款非常著名的开源`Servlet/JSP`容器，被用做`Java Servlet` 和 `JavaServer Pages`技术的官方参考实现；   
+Tomcat是一款非常著名的开源`Servlet/JSP`容器，被用做`Java Servlet` 和 `JavaServer Pages`技术的官方参考实现；
+
 ##### Tomcat服务器的体系结构的六个主要的概念：
 - Server（服务器）：代表整个容器(container)，可包含多个Service（服务）还可以包含一个GlobalNamingResources组件。
 这个组件为服务器定义全局Java命名系统接口资源，就是JNDI资源；   
@@ -415,34 +424,42 @@ Tomcat是一款非常著名的开源`Servlet/JSP`容器，被用做`Java Servlet
 ##### 修改Tomcat的JDK目录：
 - 比如：将JDK目录从D盘修改到C盘：      
 1.打开 tomcat/bin/catalina.bat    
-2.在最后一个rem后面增加如下的这行代码：    
+2.在最后一个rem后面增加如下的这行代码：
+
 ```
 set JAVA_HOME=C:\Program Files\Java\jdk1.8.0
 ```
+
 即，`set JAVA HOME=JDK`的新的安装目录    
 
 ##### 解决GET方式URL乱码问题：
+
 打开 `tomcat/conf/server.xml`    
-查找如下代码：   
+查找如下代码： 
+
 ```
 <Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443"/>
 ```
+
 在最后增加一段代码：    
 ```
 URIEncoding="UTF-8"
 ```
+
 就成为：   
 ```
 <Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" URIEncoding="UTF-8"/>
 ```
 
 ##### 修改Tomcat服务器端口：
-打开 `tomcat/conf/server.xml `    
+打开 `tomcat/conf/server.xml `  
+
 找到如下代码：    
 ```
 <Connector port="8080" maxHttpHeaderSize="8192"
 maxThreads="150" minSpareThreads="25..../>
 ```
+
 修改port属性为新的端口号即可；   
 
 
@@ -452,6 +469,7 @@ maxThreads="150" minSpareThreads="25..../>
 ```
 <Context path="/myjsp" docBase="C:\workplace\myjsp" reloadable="true"/>
 ```
+
 加入一个context上下文，这个context实际上就是一个web项目；在这个标签中有path属性；这个path属性指的是虚拟目录，用浏览器访问的时候用的；    
 例如： `http://localhost:8080/myjsp`     
 docBase属性是网页实际存放位置的根目录，映射为path虚拟目录；     
