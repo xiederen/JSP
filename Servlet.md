@@ -557,13 +557,10 @@ HttpServletResponse接口的常用常量：
 ### ServletConfig接口：
 ServletConfig接口对象包含了servlet的初始化信息。  
 在Servlet容器初始化一个servlet对象的时候，servlet容器就会传递一个ServletConfig类型的对象给这个Servlet的init方法，以便在Servlet的init方法当中获得初始化参数。   
-ServletConfig接口的常用方法：   
-
-|常用方法                  |      说明|
-|----|-----|
-|getInitParameter(String name)|根据给定的初始化参数名，返回匹配的初始化参数值；|
-
-这个初始化参数值是我们在servlet配置的时候，在web.xml当中进行配置的；如果根据给定的参数名没有找到任何参数值的时候，这个函数将返回null中，也就是控制。    
+ServletConfig接口的常用方法：   
+- getInitParameter(String name)   
+根据给定的初始化参数名，返回匹配的初始化参数值；     
+这个初始化参数值是我们在servlet配置的时候，在web.xml当中进行配置的；如果根据给定的参数名没有找到任何参数值的时候，这个函数将返回null中，也就是控制。 
 
 - getInitParameterNames()
 返回所有初始化参数名；即，返回一个Enumeration对象，包含了所有的初始化参数名；   
