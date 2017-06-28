@@ -100,7 +100,7 @@ empty   用于检测变量是否存在，是否等于null，
 
 ### EL访问作用域：
 在前面的专题中，已经学过在request作用域中存入数据：    
-``
+```
 request.setAttribute("news",news);
 ```
 使用java小脚本取出数据：       
@@ -126,7 +126,7 @@ ${requestScope.news}
 |会话作用域    |session.getAttribute("username");|
 |程序作用域    |application.getAttribute("count");|
 |页面作用域   |pageContext.getAttribute("userNum");|
-|作用域             |EL取值|
+|作用域        |EL取值|
 |请求作用域       |${requestScope.news}|
 |会话作用域       |${sessionScope.username}|
 |程序作用域       |${applicationScope.count}|
