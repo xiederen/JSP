@@ -119,8 +119,9 @@ ${requestScope.news}
 
 那使用EL来取值的代码该怎么写呢？            
 不难发现，访问作用域的EL表达式都有Scope单词，这个单词就是范围、作用域的意思；      
-如果不指定作用域，则系统会按照`page，request，session，application`的顺序进行查找；          
-|作用域 |           Java代码取值|
+如果不指定作用域，则系统会按照`page，request，session，application`的顺序进行查找； 
+
+|作用域 |  Java代码取值|
 |----|-----|        
 |请求作用域    |request.getAttribute("news");|
 |会话作用域    |session.getAttribute("username");|
