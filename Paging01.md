@@ -98,7 +98,7 @@ ResultSet rs=this.executeSQL(sql,params);
 借助Oracle学过的分页查询知识，我们在这里只需要确定分页后的起始记录数，以及结束记录数；
 起始记录数：（当前页码-1）*每页显示的记录数+1
 结束计算数：当前页码*每页显示的记录数；
-``
+```
 剩下的分页查询操作只需要借助JDBC来完成就可以了；
 
 
@@ -113,7 +113,7 @@ ResultSet rs=this.executeSQL(sql,params);
 #### java.sql.CallableStatement ：
 用于执行SQL存储过程的接口；  
 此时sql语句的形式是：   
-``
+```
 sql:{call<procedure-name>[(<arg1>,<arg2>,...]}
 ```
 而CallableStatement可以通过数据库连接对象的`prepareCall()`方法获得:
