@@ -127,7 +127,9 @@ ${requestScope.news}
 |会话作用域    |session.getAttribute("username");|
 |程序作用域    |application.getAttribute("count");|
 |页面作用域   |pageContext.getAttribute("userNum");|
+
 |作用域        |EL取值|
+|----|-----|   
 |请求作用域       |${requestScope.news}|
 |会话作用域       |${sessionScope.username}|
 |程序作用域       |${applicationScope.count}|
